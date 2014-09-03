@@ -1,0 +1,10 @@
+*.sdf
+*.pdb
+*.idb
+*.filters
+*.user
+*.tlog
+*.log
+*.obj
+*.ilk
+*.exe

@@ -1,0 +1,28 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 2013
+VisualStudioVersion = 12.0.21005.1
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "MTL", "MTL\MTL.vcxproj", "{D0F2954C-88D2-4A41-A831-DCA86AC09CB3}"
+EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "MTLTest", "MTLTest\MTLTest.vcxproj", "{96AD9880-A712-4534-9948-0E653AF5E2F8}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Win32 = Debug|Win32
+		Release|Win32 = Release|Win32
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{D0F2954C-88D2-4A41-A831-DCA86AC09CB3}.Debug|Win32.ActiveCfg = Debug|Win32
+		{D0F2954C-88D2-4A41-A831-DCA86AC09CB3}.Debug|Win32.Build.0 = Debug|Win32
+		{D0F2954C-88D2-4A41-A831-DCA86AC09CB3}.Release|Win32.ActiveCfg = Release|Win32
+		{D0F2954C-88D2-4A41-A831-DCA86AC09CB3}.Release|Win32.Build.0 = Release|Win32
+		{96AD9880-A712-4534-9948-0E653AF5E2F8}.Debug|Win32.ActiveCfg = Debug|Win32
+		{96AD9880-A712-4534-9948-0E653AF5E2F8}.Debug|Win32.Build.0 = Debug|Win32
+		{96AD9880-A712-4534-9948-0E653AF5E2F8}.Release|Win32.ActiveCfg = Release|Win32
+		{96AD9880-A712-4534-9948-0E653AF5E2F8}.Release|Win32.Build.0 = Release|Win32
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal
