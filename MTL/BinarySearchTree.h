@@ -132,6 +132,8 @@ public:
 
 	class BinaryTreeIterator : public Iterator
 	{
+		friend class BinarySearchTree<T>;
+
 		TreeTraversal _t;
 		BNode *child;
 
@@ -211,6 +213,16 @@ public:
 
 	BinarySearchTree(int(*comparison)(T, T)) : Collection(), 
 		_root(nullptr), _comparison(comparison), _end(new BNode()) {}
+
+	~BinarySearchTree() {
+		auto it = begin(TreeTraversal::Postorder);
+		while (it != end()) {
+			Node *n = it._p;
+			it++;
+			delete n;
+		}
+		delete _end;
+	}
 
 	void insert(const T& data) {
 		BNode * node = static_cast<BNode*>(allocateNode(data)); //can use static_cast here, as valid downcast is guranteed

@@ -15,6 +15,34 @@ public:
 		return 0;
 	}
 
+	void traverse(BinarySearchTree<int> &tree, TreeTraversal t) {
+		auto it = tree.begin(t);
+		while (it != tree.end()) {
+			int n = *it;
+			it++;
+			cout << n << ",";
+		}
+		cout << endl;
+	}
+
+	void doTraversals(BinarySearchTree<int> &tree) {
+		cout << "Levelorder traversal:\n";
+		traverse(tree, TreeTraversal::Levelorder);
+		cout << endl;
+
+		cout << "Preorder traversal:\n";
+		traverse(tree, TreeTraversal::Preorder);
+		cout << endl;
+
+		cout << "Inorder traversal:\n";
+		traverse(tree, TreeTraversal::Inorder);
+		cout << endl;
+
+		cout << "Postorder traversal:\n";
+		traverse(tree, TreeTraversal::Postorder);
+		cout << endl;
+	}
+
 	void test() {
 		BinarySearchTree<int> tree(&TestHarness::comparisonInt);
 		tree.insert(5);
@@ -29,66 +57,13 @@ public:
 		n = tree.search(11);
 		cout << *n << endl;
 
-		/*auto itPre = tree.beginPreOrder();
-		while (itPre != tree.endPreOrder()) {
-			int n = *itPre;
-			itPre++;
-			cout << n << ",";
-		}
-		cout << endl;
+		doTraversals(tree);
 
-		auto itPost = tree.beginPostOrder();
-		while (itPost != tree.endPostOrder()) {
-			int n = *itPost;
-			itPost++;
-			cout << n << ",";
-		}
-		cout << endl;
-
-		auto itIn = tree.beginInOrder();
-		while (itIn != tree.endInOrder()) {
-			int n = *itIn;
-			itIn++;
-			cout << n << ",";
-		}
-		cout << endl;*/
-
-		cout << "Levelorder traversal:\n";
-		auto itLev = tree.begin(TreeTraversal::Levelorder);
-		while (itLev != tree.end()) {
-			int n = *itLev;
-			itLev++;
-			cout << n << ",";
-		}
-		cout << endl;
-
-		cout << "Preorder traversal:\n";
-		auto itPre = tree.begin(TreeTraversal::Preorder);
-		while (itPre != tree.end()) {
-			int n = *itPre;
-			itPre++;
-			cout << n << ",";
-		}
-		cout << endl;
-
-		cout << "Inorder traversal:\n";
-		auto itIn = tree.begin(TreeTraversal::Inorder);
-		while (itIn != tree.end()) {
-			int n = *itIn;
-			itIn++;
-			cout << n << ",";
-		}
-		cout << endl;
-
-		cout << "Postorder traversal:\n";
-		auto itPost = tree.begin(TreeTraversal::Postorder);
-		while (itPost != tree.end()) {
-			int n = *itPost;
-			itPost++;
-			cout << n << ",";
-		}
-		cout << endl;
-
+		cout << "Deleted 3\n\n";
 		tree.deleteNode(3);
+
+		doTraversals(tree);
 	}
+
+	
 };
